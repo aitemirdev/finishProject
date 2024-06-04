@@ -22,7 +22,7 @@ const UserForm = () => {
             setName('');
             setEmail('');
             setUsername('');
-            addUser(response.data); // Вызываем функцию addUser из контекста
+            addUser(response.data);
         } catch (error) {
             console.error('Error creating user:', error);
         }

@@ -12,7 +12,6 @@ const UserTable = () => {
             await axios.delete(`http://localhost:3000/users/${userId}`);
             setShowModal(true);
 
-            // Обновите список пользователей после удаления
             const updatedUsers = users.filter((user) => user.id !== userId);
             setUsers(updatedUsers);
         } catch (error) {
@@ -55,6 +54,7 @@ const UserTable = () => {
                 <div className="modal">
                     <div className="modal-content">
                         <h2>Пользователь удален</h2>
+                        <h4>жаль</h4>
                         <button className="close-button form-button" onClick={() => setShowModal(false)}>Закрыть</button>
                     </div>
                 </div>
